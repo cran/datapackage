@@ -1,0 +1,119 @@
+{
+  "name": "example",
+  "title": "Example data set for the datapackage package",
+  "description": "This is an example data set to show how the datapackage package can be used to import data into R.\n\nIts main data resource is the `employ` resource which contains fictional data about individuals. The other data resources are supporting data sets.",
+  "resources": [
+    {
+      "name": "employment",
+      "title": "Employment status",
+      "description": "Employment status, income and background properties of sample of persons.\n\nThis data set has a number of differenttypes of data to show how the datapackage package handles these.",
+      "path": "employ.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "dialect": {
+        "decimalChar": ",",
+        "delimiter": ";",
+        "nullSequence": "NA"
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "id",
+            "title": "Random personal identifier",
+            "type": "integer"
+          }, {
+            "name": "dob",
+            "title": "Date of Birth",
+            "type": "date"
+          }, {
+            "name": "gender",
+            "title": "Gender",
+            "type": "string",
+            "categories": {
+              "resource": "codelist-gender"
+            }
+          }, {
+            "name": "employ",
+            "title": "Employment status",
+            "type": "string",
+            "categories": {
+              "resource": "codelist-employ"
+            }
+          }, {
+            "name": "income",
+            "title": "Net income",
+            "type": "number",
+            "bareNumber": false,
+            "decimalChar": ",",
+            "groupChar": " "
+          }, {
+            "name": "haspartner",
+            "title": "Does person have a partner?",
+            "type": "boolean",
+            "trueValues": ["Y"],
+            "falseValues": ["N"]
+          }
+        ]
+      }
+    }, {
+      "name": "codelist-gender",
+      "path": "codelist-gender.csv",
+      "format": "csv",
+      "encoding": "utf-8",
+      "dialect": {
+        "decimalChar": ",",
+        "delimiter": ";",
+        "nullSequence": "NA"
+      },
+      "categoryFieldMap": {
+        "value": "code",
+        "label": "label"
+      },
+      "title": "Code list for gender of person",
+      "schema": {
+        "fields": [
+          { 
+            "name": "code", 
+            "type": "string"
+          }, { 
+            "name": "label", 
+            "type": "string"
+          }, { 
+            "name": "missing", 
+            "type": "boolean"
+          }
+        ]
+      }
+    }, {
+      "name": "codelist-employ",
+      "path": "codelist-employ.csv",
+      "format": "csv",
+      "encoding": "utf-8",
+      "dialect": {
+        "decimalChar": ",",
+        "delimiter": ";",
+        "nullSequence": "NA"
+      },
+      "categoryFieldMap": {
+        "value": "code",
+        "label": "label"
+      },
+      "title": "Code list for employment status",
+      "schema": {
+        "fields": [
+          { 
+            "name": "code", 
+            "type": "string"
+          }, { 
+            "name": "label", 
+            "type": "string"
+          }, { 
+            "name": "missing", 
+            "type": "boolean"
+          }
+        ]
+      }
+    }
+  ]
+}
