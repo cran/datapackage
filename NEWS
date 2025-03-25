@@ -1,11 +1,33 @@
 
-CHANGES IN VERSION 0.1.1
+CHANGES IN VERSION 0.2.0
 
 NEW FEATURES
+
+  - `dp_to_code` will remove white space at the beginning and end of character
+    values from category values and the field and multiple hypens at the
+    beginning of values when the option `DP_TRIM_CODES` is set to `TRUE`
+    (default value is `FALSE`). Ignoring multiple hyphens can be disabled by
+    setting `DP_TRIM_HYPHEN` to `FALSE`. 
   
-  - [New feature]
+  - `dp_to_factor` will ignore white space at the beginning and end of character
+    values and multiple hypens at the beginning of values when the option
+    `DP_TRIM_CODES` is set to `TRUE` (default value is `FALSE`). Ignoring
+    multiple hyphens can be disabled by setting `DP_TRIM_HYPHEN` to `FALSE`. 
+
+  - `dp_generate_fielddescriptor` now generates correct meta data for objects
+    of type `code` from the `codelist` package.
+
+  - `dp_categorieslist` returns the code list from a `code` object from the
+    `codelist` package.
+
+  - `dp_type()` and `dp_type<-()` added for Field Descriptor to get and set 
+    the field type.
+
+  - Added checking of constraints for fields of type 'datetime', 'year', 
+    `yearmonth`.
 
 BUG FIXES
 
-  - [Bug fix]
+  - Checking 'minimum', 'maximum', 'exclusiveMinimum', 'exclusiveMaximum' 
+    constraints on non numeric fields failed.
 
