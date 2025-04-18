@@ -1,4 +1,39 @@
 
+CHANGES IN VERSION 0.2.1
+
+NEW FEATURES
+
+  - Colorised output in print methods.
+
+BUG FIXES
+
+  - `dp_apply_schema()` now handles the `fieldsMatch` property of the schema
+    correctly. Previously only `'exact'` was handled: the columns in the data
+    set should match the fields in the schema exactly. 
+
+  - `dp_check_dataresource()` was looking for the the `fieldsMatch` property in
+    the wrong location in the schema (it expected this property to be directly
+    in the Data Resource). This property should be in the `schema` property of
+    the Data Resource. 
+
+  - `csv_reader()` now handles the `fieldsMatch` property of the schema
+    correctly. Previously the the code assumed `exact` for the `fieldsMatch`
+    property. In general this would result in an error when reading a file. 
+
+
+  - `dp_apply_schema()` gives clearer error messages: reports the column in
+    which the error occured.
+
+  - Small changes to print functions.
+
+  - Fix issue with large integer when using a yaml file. These are now 
+    converted to numeric.
+
+  - `dp_write_data()` gave error when data is stored in a subdirectory of the
+    data package and this directory does not yet exist. These directories are
+    now automatically created. 
+
+
 CHANGES IN VERSION 0.2.0
 
 NEW FEATURES
