@@ -1,6 +1,6 @@
-5fb71823de85e3269470f55a810b210b *DESCRIPTION
+89a91f49b2cfd67952b04f084f0bc1b9 *DESCRIPTION
 102c75da4e36b83446b0bacd3e8b3754 *NAMESPACE
-35669d06568683243afb022ea15bc40e *NEWS
+b1fb89ad17eacfe0b33bb9f12edc2c3a *NEWS
 6462049eb90bdc25493bf30af1cbd11c *R/categories.R
 fa50a7fde74272868a7442e237f39b74 *R/check_constraint.R
 7574652233fa1c2524b2cf2d3330b025 *R/clearandcheckcategories.R
@@ -8,7 +8,7 @@ fa50a7fde74272868a7442e237f39b74 *R/check_constraint.R
 a853829f96ab417b50b41eaf5d87d5bf *R/csv_colclass.R
 1e32db725efa99005b5394260222c3ca *R/csv_format.R
 168eb717f6f769d2ed45222458b97965 *R/csv_reader.R
-3818bdeccf147aa321299717387af4c2 *R/csv_writer.R
+694eb652f1932d7f4088e0f085ec147d *R/csv_writer.R
 4e5a9f26225cae8c09304bbc608172ca *R/dp_add_reader.R
 253b05069ccbe99a44387eb1641dfa53 *R/dp_add_writer.R
 573c44c461e3e0072dc3207e48451efc *R/dp_apply_schema.R
@@ -51,7 +51,7 @@ e33d586a9ca6aff162b37448353f9edd *R/new_dataresource.R
 9cde0a2e4db44c60fcb4bef86ddcacbf *R/open_datapackage.R
 c925608b42b3dfc2a3253e9fec6535f2 *R/print_datapackage.R
 962c03996b310f7fac5446a02985bd90 *R/print_dataresource.R
-3a9548c3c93bcd84537518161fd46ede *R/print_fielddescriptor.R
+0f8692937920c56226b98dae6398977e *R/print_fielddescriptor.R
 9502ca4f58f47da2fdfc444330b3339a *R/print_tableschema.R
 75370e374f80015561f9328df4b034a9 *R/printdescription.R
 f97a20a8989fd64cc9181d6ba4287690 *R/properties_datapackage.R
@@ -61,16 +61,17 @@ c8357edd5fbec9bb5ffe9ce04e64356a *R/properties_dataresource.R
 82ce08e49899c2e90a2a6eca4f51b4e6 *R/read_json_yaml.R
 9245d65da6f336595b56deead044c6bc *R/readdatapackage.R
 55822cc5ee68c686d68559c0a244885b *R/str_tableschema.R
+cf2e7f628329e87fd2ace8102382c8b3 *R/to_json.R
 5da039d633bf5b379c95640176aa4aef *R/utils.R
 bdaa4ea8da62c58cf43d60adc355df8b *R/utils_determine_decimalchar.R
-9742e1837e774f55e66b8d3f9023f9d4 *R/writedatapackage.R
+35a2a62a810ce47e9f9de4c7f2935a53 *R/writedatapackage.R
 7f13b8231a32bb11b13374eb863c1f9a *R/zzz.R
-f41326126316df0e41a59f401fda8808 *build/vignette.rds
+bbd9dab841ec291b71c74ccdb35df643 *build/vignette.rds
 a05fdf361e6db55fbfbad3a4bcdf1205 *inst/doc/creating_a_datapackage.R
-16056613fc18c10e5d9118b0535ad451 *inst/doc/creating_a_datapackage.html
+e55fcbfa03a9b51e53a49e001c1c5fef *inst/doc/creating_a_datapackage.html
 16210f1182c97092556ffc81c7c3af24 *inst/doc/creating_a_datapackage.md
 29ea0e339ca9121bd5894e9415a54838 *inst/doc/introduction.R
-2232bd4bc6eee0e7c02237d33a733c8e *inst/doc/introduction.html
+ed4420b72b6e9260bfa50a9c6cc0f9b7 *inst/doc/introduction.html
 b4de49eb172bc4d71a908d98a3a5a12a *inst/doc/introduction.md
 cf70e1bbc5399dfe15347475f7bef2b2 *inst/doc/support.html
 9683569515427a58f5040beae7168485 *inst/doc/support.md
@@ -139,7 +140,7 @@ accdc451b5e77dd56eaa209279a92549 *man/properties_fielddescriptor.Rd
 61932c041ca4fea7064a51e0fae04e0e *tests/check_constraint.R
 7d2dda4432197b1c66452155cd212af4 *tests/csv_read_field_order.R
 01e8298c242d20eb73ff62dde0200f09 *tests/csv_reader.R
-93dfd248ccf6d99954b9e4a8e3832ea7 *tests/csv_writer.R
+2e84ef270583d69e08f1929e7a8a5664 *tests/csv_writer.R
 5da34382ae406c718c8dab39c8b8f175 *tests/date.R
 f8efcb44b7d0f83bf76366e6b124c9c7 *tests/datetime.R
 c146ef38077b9a9c0a801f3c33a8e8af *tests/dp_apply_schema_check_fields.R
@@ -161,6 +162,7 @@ b9101cdbde6edc77240120c1a00a807a *tests/number.R
 ab4dc6328872447107bfaee68af3bda4 *tests/properties_fielddescriptor.R
 3c7a022db45d456e4b26dcc9840bf08a *tests/string.R
 69ffaaaddfab8973a1f2d5cf99533781 *tests/time.R
+02e32285c1dee5c96bee8c348afafa64 *tests/to_json.R
 4ea90c1eb3361723458771aa62c2e8bb *tests/yaml.R
 79d80bfb2b9b8aa64b405919d32f9cd9 *tests/year.R
 1ac39068b6ad8a5fe535044efc5e93e9 *tests/yearmonth.R

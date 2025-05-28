@@ -1,7 +1,7 @@
 Package: datapackage
 Type: Package
 Title: Creating and Reading Data Packages
-Version: 0.2.1
+Version: 0.2.3
 Authors@R: 
     person(given = "Jan",
            family = "van der Laan",
@@ -23,8 +23,9 @@ License: GPL-3
 Encoding: UTF-8
 RoxygenNote: 7.3.2
 NeedsCompilation: no
-Packaged: 2025-04-18 14:51:16 UTC; eoos
-Author: Jan van der Laan [aut, cre] (<https://orcid.org/0000-0002-0693-1514>)
+Packaged: 2025-05-28 05:55:25 UTC; eoos
+Author: Jan van der Laan [aut, cre] (ORCID:
+    <https://orcid.org/0000-0002-0693-1514>)
 Maintainer: Jan van der Laan <r@eoos.dds.nl>
 Repository: CRAN
-Date/Publication: 2025-04-18 15:10:02 UTC
+Date/Publication: 2025-05-28 06:30:02 UTC
